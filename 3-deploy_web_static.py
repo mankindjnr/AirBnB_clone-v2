@@ -83,8 +83,8 @@ def deploy():
     """
     creates and distributes an archive to your web servers
     """
-   the_path = do_pack()
-   if the_path is None:
-       return False
-   req_value = do_deploy(the_path)
-   return req_value
+    the_path = do_pack()
+    if the_path is None:
+        return False
+    req_value = do_deploy(the_path)
+    return req_value
