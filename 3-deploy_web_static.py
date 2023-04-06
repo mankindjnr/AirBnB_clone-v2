@@ -34,6 +34,7 @@ def do_pack():
     these creates and distributes an  archive to your web servers
     """
 
+    
 def do_deploy(archive_path):
     """deploying the archive to the web servers
     """
@@ -72,12 +73,15 @@ def do_deploy(archive_path):
         return False
     return True
 
+
+
 """
 Fabric script (based on the file 2-do_deploy_web_static.py)
 that creates and distributes an archive to your web servers,
  using the function deploy:
 Prototype: def deploy():
 """
+
 
 def deploy():
     """
