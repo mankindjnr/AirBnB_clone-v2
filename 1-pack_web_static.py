@@ -23,8 +23,8 @@ def do_pack():
     """creation of the directory versions
     """
     local("mkdir -p versions")
-    result = local("tar -cvzf {} web_static".format(fileArchive))
-    if result.succeeded:
+    output = local("tar -cvzf {} web_static".format(fileArchive))
+    if output.succeeded:
         return (fileArchive)
     else:
         return None
