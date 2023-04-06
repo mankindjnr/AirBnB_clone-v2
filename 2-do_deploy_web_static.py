@@ -7,8 +7,7 @@ import os
 from fabric.api import *
 from datetime import datetime
 
-env.key_filename = '~/.ssh/school'
-env.hosts = ['107.22.142.247', '100.26.230.92']
+env.hosts = ["100.26.230.92", "107.22.142.247"]
 
 def do_pack():
     """
@@ -16,11 +15,11 @@ def do_pack():
     """
     current = datetime.now()
     fileArchive = "versions/web_static_{}{}{}{}{}{}.tgz".format(current.year,
-                                                             current.month,
-                                                             current.day,
-                                                             current.hour,
-                                                             current.minute,
-                                                             current.second)
+                                                                current.month,
+                                                                current.day,
+                                                                current.hour,
+                                                                current.minute,
+                                                                current.second)
     print("Packing web_static to {}".format(fileArchive))
     """creation of the directory versions
     """
@@ -49,7 +48,7 @@ def do_deploy(archive_path):
     run("mkdir -p /data/web_static/releases/{}".format(name_path[:-4]))
 
     cmd = "tar -xvzf /tmp/{} -C /data/web_static/releases/{}".format(name_path,
-                                                                    name_path[:-4])
+                                                                     name_path[:-4])
     result_path = run(cmd)
     if result_path.failed:
         return False
@@ -71,4 +70,4 @@ def do_deploy(archive_path):
     result_path = run(cmd)
     if result_path.failed:
         return False
-    return True
+        return True

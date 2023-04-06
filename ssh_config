@@ -1,0 +1,2 @@
+Host *
+    IdentityFile /path/to/my_ssh_private_key
