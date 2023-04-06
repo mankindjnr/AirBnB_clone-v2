@@ -65,8 +65,8 @@ def do_deploy(archive_path):
     if result_path.failed:
         return False
 
-    path = "/data/web_static/releases/{}".format(name_path[:-4])
-    cmd = "ln -sf {} /data/web_static/current".format(path)
+    path_uncompress = "/data/web_static/releases/{}".format(name_path[:-4])
+    cmd = "ln -sf {} /data/web_static/current".format(path_uncompress)
     result_path = run(cmd)
     if result_path.failed:
         return False
