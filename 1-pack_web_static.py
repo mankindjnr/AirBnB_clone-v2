@@ -18,7 +18,7 @@ def do_pack():
                                                              current.hour,
                                                              current.minute,
                                                              current.second)
-    print("Packing web_static to versions/{}".format(fileArchive))
+    print("Packing web_static to {}".format(fileArchive))
     """creation of the directory versions
     """
     local("mkdir -p versions")
