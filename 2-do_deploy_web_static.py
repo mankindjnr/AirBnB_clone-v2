@@ -70,4 +70,4 @@ def do_deploy(archive_path):
     result_path = run(cmd)
     if result_path.failed:
         return False
-        return True
+    return True
