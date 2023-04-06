@@ -70,4 +70,21 @@ def do_deploy(archive_path):
     result_path = run(cmd)
     if result_path.failed:
         return False
-        return True
+    return True
+
+"""
+Fabric script (based on the file 2-do_deploy_web_static.py)
+that creates and distributes an archive to your web servers,
+ using the function deploy:
+Prototype: def deploy():
+"""
+
+def deploy():
+    """
+    creates and distributes an archive to your web servers
+    """
+   the_path = do_pack()
+   if the_path is None:
+       return False
+   req_value = do_deploy(the_path)
+   return req_value
