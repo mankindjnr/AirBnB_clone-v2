@@ -7,17 +7,18 @@
 from fabric.api import *
 from datetime import datetime
 
+
 def do_pack():
     """
     this is an archive of the contents in web static folder
     """
     current = datetime.now()
     fileArchive = "versions/web_static_{}{}{}{}{}{}.tgz".format(current.year,
-                                                             current.month,
-                                                             current.day,
-                                                             current.hour,
-                                                             current.minute,
-                                                             current.second)
+                                                                current.month,
+                                                                current.day,
+                                                                current.hour,
+                                                                current.minute,
+                                                                current.second)
     print("Packing web_static to {}".format(fileArchive))
     """creation of the directory versions
     """
