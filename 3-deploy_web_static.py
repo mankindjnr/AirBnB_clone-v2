@@ -9,6 +9,7 @@ from datetime import datetime
 
 env.hosts = ["100.26.230.92", "107.22.142.247"]
 
+
 def do_pack():
     """
     this is an archive of the contents in web static folder
@@ -34,7 +35,7 @@ def do_pack():
     these creates and distributes an  archive to your web servers
     """
 
-    
+
 def do_deploy(archive_path):
     """deploying the archive to the web servers
     """
@@ -72,7 +73,6 @@ def do_deploy(archive_path):
     if result_path.failed:
         return False
     return True
-
 
 
 """
