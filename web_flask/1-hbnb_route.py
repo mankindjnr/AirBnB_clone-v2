@@ -7,18 +7,20 @@ from flask import Flask
 
 hbnb_route = Flask(__name__)
 
+
 @hbnb_route.route("/", strict_slashes=False)
 def hello():
     """
     Routes:
-    /: Hello 
+    /: Hello
     """
     return "Hello HBNB!"
+
 
 @hbnb_route.route("/hbnb", strict_slashes=False)
 def hbnb():
     """
-    /hbnb: 
+    /hbnb:
     """
     return "HBNB"
 
