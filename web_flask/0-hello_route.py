@@ -2,7 +2,6 @@
 """
 script that starts a Flask web application:
 """
-import web_flask
 from flask import Flask
 
 hello_route = Flask(__name__) #references this file
@@ -14,7 +13,7 @@ def index():
     """
     ROUTE  /: Hello HBNB!display
     """
-    return "Hello, HBNB!"
+    return "Hello HBNB!"
 
 if __name__ == "__main__":
     hello_route.run(host='0.0.0.0', port=5000) # any errors will pop up in the web
