@@ -7,20 +7,23 @@ from flask import Flask
 
 number_route = Flask(__name__)
 
+
 @number_route.route("/", strict_slashes=False)
 def hello():
     """
     Routes:
-    /: Hello 
+    /: Hello
     """
     return "Hello HBNB!"
+
 
 @number_route.route("/hbnb", strict_slashes=False)
 def hbnb():
     """
-    /hbnb: 
+    /hbnb:
     """
     return "HBNB"
+
 
 @number_route.route("/c/<text>", strict_slashes=False)
 def print_variable(text):
@@ -30,6 +33,7 @@ def print_variable(text):
     text = text.replace("_", " ")
     return "C {}".format(text)
 
+
 @number_route.route("/python/<text>", strict_slashes=False)
 @number_route.route("/python/", strict_slashes=False)
 def var_deafult_parameters(text="is_cool"):
@@ -38,6 +42,7 @@ def var_deafult_parameters(text="is_cool"):
     """
     text = text.replace("_", " ")
     return "Python {}".format(text)
+
 
 @number_route.route("/number/<int:n>", strict_slashes=False)
 def integer_num(n):

@@ -7,20 +7,23 @@ from flask import Flask
 
 c_route = Flask(__name__)
 
+
 @c_route.route("/", strict_slashes=False)
 def hello():
     """
     Routes:
-    /: Hello 
+    /: Hello
     """
     return "Hello HBNB!"
+
 
 @c_route.route("/hbnb", strict_slashes=False)
 def hbnb():
     """
-    /hbnb: 
+    /hbnb:
     """
     return "HBNB"
+
 
 @c_route.route("/c/<text>", strict_slashes=False)
 def print_variable(text):
